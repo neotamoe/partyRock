@@ -144,8 +144,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEB-aE-ggN">
+                                <rect key="frame" x="16" y="277" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="xrk-V7-aul"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgL-8l-Evj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="192"/>
+                                <rect key="frame" x="0.0" y="46" width="375" height="192"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="r3v-Tl-jKs"/>
@@ -154,11 +163,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="kEB-aE-ggN" firstAttribute="top" secondItem="hgL-8l-Evj" secondAttribute="bottom" constant="39" id="71j-Ld-B9u"/>
                             <constraint firstItem="hgL-8l-Evj" firstAttribute="leading" secondItem="UWN-up-oMU" secondAttribute="leading" id="VZU-if-s0F"/>
+                            <constraint firstItem="kEB-aE-ggN" firstAttribute="trailing" secondItem="UWN-up-oMU" secondAttribute="trailingMargin" id="gGv-6V-dYl"/>
+                            <constraint firstItem="hgL-8l-Evj" firstAttribute="top" secondItem="6TY-yO-EaK" secondAttribute="bottom" constant="26" id="ijw-z0-8c7"/>
                             <constraint firstItem="hgL-8l-Evj" firstAttribute="top" secondItem="UWN-up-oMU" secondAttribute="top" id="s8F-qc-BeM"/>
+                            <constraint firstItem="kEB-aE-ggN" firstAttribute="leading" secondItem="UWN-up-oMU" secondAttribute="leadingMargin" id="tUH-qS-6yf"/>
                             <constraint firstAttribute="trailing" secondItem="hgL-8l-Evj" secondAttribute="trailing" id="yhT-Ud-tgB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="kEB-aE-ggN" id="7E6-09-3YH"/>
+                        <outlet property="webView" destination="hgL-8l-Evj" id="aez-JT-oIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hx-Y7-BJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
